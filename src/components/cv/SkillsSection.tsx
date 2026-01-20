@@ -3,7 +3,7 @@ import { Check, Languages, Users, Target, Palette, Laptop, Star } from "lucide-r
 const SkillsSection = () => {
   const skills = [
     { icon: Star, label: "Monotonitástűrés" },
-    { icon: Languages, label: "Angol (középszint)" },
+    { icon: Languages, label: "(középszint)" },
     { icon: Users, label: "Csapatmunka" },
     { icon: Target, label: "Precizitás" },
     { icon: Palette, label: "Kreativitás" },

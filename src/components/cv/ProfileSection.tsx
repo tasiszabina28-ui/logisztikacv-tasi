@@ -7,7 +7,7 @@ const ProfileSection = () => {
         <div className="w-40 h-40 rounded-full overflow-hidden ring-4 ring-primary/20 shadow-xl">
           <img
             src={profilePhoto}
-            alt="Tasi Szabina"
+            alt="kurva anyádatxd"
             className="w-full h-full object-cover"
           />
         </div>

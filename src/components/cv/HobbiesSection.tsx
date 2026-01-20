@@ -2,14 +2,11 @@ import { Camera, Palette, BookOpen, Dumbbell, Users, Code, Layout } from "lucide
 
 const HobbiesSection = () => {
   const hobbies = [
-    { icon: Users, label: "Barátok" },
-    { icon: Camera, label: "Fotózás" },
-    { icon: Palette, label: "Festés" },
-    { icon: BookOpen, label: "Olvasás" },
-    { icon: Dumbbell, label: "Fitness" },
-    { icon: Code, label: "Webfejlesztés" },
-    { icon: Layout, label: "Webdesign" },
-  ];
+    
+    { icon: Camera, label: "Digitális fotózás" },
+    { icon: Palette, label: "Festészet & kreatív alkotás" },
+    { icon: BookOpen, label: "Önfejlesztés & szórakoztató irodalom" },
+    { icon: Dumbbell, label: "Fitness & Egészségtudatos életmód" },]
 
   return (
     <section className="bg-card rounded-2xl p-6 shadow-md">

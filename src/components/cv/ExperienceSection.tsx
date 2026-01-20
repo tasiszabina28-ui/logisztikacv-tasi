@@ -12,7 +12,7 @@ const ExperienceSection = () => {
     {
       title: "Adminisztrációs gyakornok",
       company: "EGIS Gyógyszergyár Zrt.",
-      period: "2025.05 - 2026.01",
+      period: "2025.05 - jelenleg",
       description: "Az automatizálási és metrológia főosztály munkáját segítem, adminisztrációs tevékenységet végzek a belső rendszerekben, valamint Excel munkák."
     },
     {
@@ -32,6 +32,12 @@ const ExperienceSection = () => {
       company: "Fedex Express Hungary KFT.",
       period: "2023.05 - 2023.11",
       description: "Import vám osztályon segédkeztem a vámkezelésben, vámkezelési megbízásokat és értesítéseket küldtem ki, ügyfelekkel tartottam kapcsolatot."
+    },
+    {
+      title: "Minőségellenőr, majd gépkezelő",
+      company: "CooperVision Kft",
+      period: "2021.06 - 2021.09 majd 2022.06-2022.09",
+      description: "Kontaktlencse gyártásban vettem részt, minőségellenőri feladatokat láttam el, majd gépkezelőként dolgoztam a gyártósoron diákként."
     },
   ];
 

@@ -10,16 +10,16 @@ interface Education {
 const EducationSection = () => {
   const education: Education[] = [
     {
-      school: "Budapesti Gazdasági Egyetem - KVIK",
+      school: "Budapesti Gazdasági Egyetem - MÜKK",
       degree: "Kereskedelem-marketing képzés",
       period: "2022 - jelenleg",
-      description: "Kereskedelem szakirány, jelenleg 6. félév"
+      description: "Kereskedelem szakirány"
     },
     {
       school: "KSZC Kandó Kálmán Technikum",
       degree: "Képzőművészeti szakgimnázium",
       period: "2017 - 2022",
-      description: "Kerámia szak, érettségi"
+      description: "Képzőművészeti tagozat, érettségi"
     },
   ];
 
