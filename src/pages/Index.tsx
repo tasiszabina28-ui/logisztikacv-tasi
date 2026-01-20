@@ -7,8 +7,16 @@ import HobbiesSection from "@/components/cv/HobbiesSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background py-8 px-4">
-      <div className="max-w-5xl mx-auto">
+    <div className="min-h-screen bg-background py-8 px-4 relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/3 -left-32 w-64 h-64 bg-primary/5 rounded-full blur-2xl" />
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-primary/8 rounded-full blur-2xl" />
+      </div>
+      
+      <div className="max-w-5xl mx-auto relative z-10">
         {/* Header with profile */}
         <header className="bg-card rounded-3xl p-8 shadow-lg mb-8">
           <ProfileSection />

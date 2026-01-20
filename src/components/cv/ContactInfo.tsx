@@ -5,7 +5,7 @@ const ContactInfo = () => {
     { icon: Phone, label: "Telefon", value: "06 30 699 5010" },
     { icon: Mail, label: "E-mail", value: "tasi.szabina28@gmail.com", href: "mailto:tasi.szabina28@gmail.com" },
     { icon: MapPin, label: "Helyszín", value: "Budapest, XIV. kerület" },
-    { icon: Clock, label: "Elérhetőség", value: "Heti 30 óra" },
+    { icon: Clock, label: "Elérhetőség", value: "Heti 30-40 óra" },
   ];
 
   return (
