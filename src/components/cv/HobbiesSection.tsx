@@ -1,4 +1,4 @@
-import { Camera, Palette, BookOpen, Dumbbell, Users } from "lucide-react";
+import { Camera, Palette, BookOpen, Dumbbell, Users, Code, Layout } from "lucide-react";
 
 const HobbiesSection = () => {
   const hobbies = [
@@ -7,6 +7,8 @@ const HobbiesSection = () => {
     { icon: Palette, label: "Festés" },
     { icon: BookOpen, label: "Olvasás" },
     { icon: Dumbbell, label: "Fitness" },
+    { icon: Code, label: "Webfejlesztés" },
+    { icon: Layout, label: "Webdesign" },
   ];
 
   return (

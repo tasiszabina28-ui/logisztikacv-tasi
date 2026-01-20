@@ -32,10 +32,6 @@ const Index = () => {
           </main>
         </div>
 
-        {/* Footer */}
-        <footer className="mt-8 text-center text-muted-foreground text-sm">
-          <p>© 2025 Tasi Szabina • Készült szeretettel</p>
-        </footer>
       </div>
     </div>
   );
