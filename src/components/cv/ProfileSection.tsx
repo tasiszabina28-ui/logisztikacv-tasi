@@ -20,9 +20,9 @@ const ProfileSection = () => {
       </p>
       <p className="max-w-md text-muted-foreground leading-relaxed">
         23 éves vagyok, a 14. kerületben élek és jelenleg 6. félévemet töltöm 
-        kereskedelem-marketing szakon a BGE-KVIK-en. Célom, hogy elhelyezkedhessek 
+        kereskedelem-marketing szakon a BGE-MÜKK-ön. Célom, hogy elhelyezkedhessek 
         egy multinacionális cégnél, betekintést nyerhessek a belső folyamatokba, 
-        tapasztalatot szerezhessek.
+        tapasztalatot szerezhessek, esetleg gyakorlati időm letöltése és a képzés elvégzése után elhelyezkedhessek teljes állásban.
       </p>
     </section>
   );
