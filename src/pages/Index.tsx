@@ -4,6 +4,7 @@ import ExperienceSection from "@/components/cv/ExperienceSection";
 import EducationSection from "@/components/cv/EducationSection";
 import SkillsSection from "@/components/cv/SkillsSection";
 import HobbiesSection from "@/components/cv/HobbiesSection";
+import PortfolioSection from "@/components/cv/PortfolioSection";
 
 const Index = () => {
   return (
@@ -37,6 +38,7 @@ const Index = () => {
               <ExperienceSection />
             </div>
             <SkillsSection />
+            <PortfolioSection />
           </main>
         </div>
 
