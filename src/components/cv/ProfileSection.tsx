@@ -36,7 +36,7 @@ const ProfileSection = () => {
       >
         23 éves vagyok, a 14. kerületben élek és jelenleg 6. félévemet töltöm 
         kereskedelem-marketing szakon a BGE-MÜKK-ön. Célom, hogy betekintést nyerhessek egy vállalat belső folyamataiba (kezdve a beszerzéstől a logisztikán, marketingen át egészen a sales-ig, számomra mindez érdekes lehet), 
-        tapasztalatot szerezhessek, gyakorlati időm letöltése utánelhelyezkedhessek teljes állásban.
+        tapasztalatot szerezhessek, gyakorlati időm letöltése után elhelyezkedhessek teljes állásban.
       </p>
     </section>
   );
