@@ -13,7 +13,7 @@ const ExperienceSection = () => {
       title: "Adminisztrációs gyakornok",
       company: "EGIS Gyógyszergyár Zrt.",
       period: "2025.05 - jelenleg",
-      description: "Az automatizálási és metrológia főosztály munkáját segítem, adminisztrációs tevékenységet végzek a belső rendszerekben, valamint Excel munkák."
+      description: "Az automatizálási és metrológia főosztály munkáját segítem, adminisztrációs tevékenységet végzek a belső rendszerekben, valamint Excel táblázatokban dolgozom."
     },
     {
       title: "Supply chain gyakornok",
