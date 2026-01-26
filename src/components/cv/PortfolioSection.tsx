@@ -25,7 +25,7 @@ const projects: PortfolioProject[] = [
   {
     title: "CherryOnTop Webalkalmazás",
     category: "UI/UX design, Webfejlesztés",
-    description: "Tanulást segítő applikáció koncepció. Interaktív prototípus és landing page terv.",
+    description: "Mikrotanulás applikáció koncepció. Interaktív prototípus és landing page terv.",
     image: "/app-mockup.jpg", 
     link: "https://cherryontopthestudyapp.vercel.app/", 
     tags: ["UI/UX Design", "App Concept"],
