@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { ThemeToggle } from "./themetoggle";
-
+import { LanguageToggle } from "./LanguageToggle";
 interface MainLayoutProps {
   children: ReactNode;
 }
@@ -22,6 +22,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
           {/* Kapcsoló (Marad a jobb oldalon) */}
           <div className="flex items-center gap-2">
             <ThemeToggle />
+            <LanguageToggle />
           </div>
         </div>
       </header>

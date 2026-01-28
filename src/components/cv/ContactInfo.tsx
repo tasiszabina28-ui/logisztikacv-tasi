@@ -1,15 +1,42 @@
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, EarthIcon } from "lucide-react";
+import { useLanguage } from "../LanguageContext";
 
 const ContactInfo = () => {
+  // 1. Behívjuk a fordítót
+  const { t } = useLanguage();
+
   const contacts = [
-    { icon: Phone, label: "Telefon", value: "06 30 699 5010" },
-    { icon: Mail, label: "E-mail", value: "tasi.szabina28@gmail.com", href: "mailto:tasi.szabina28@gmail.com" },
-    { icon: MapPin, label: "Lakhely", value: "Budapest" },
-    { icon: Clock, label: "Elérhetőség", value: "Heti 40 óra" },
+    { 
+      icon: Phone, 
+      label: t("Telefon", "Phone"), // Fordítás
+      value: "06 30 699 5010", 
+      href: "tel:+36306995010" // Javítva: 'tel:' után nem kell pont és szóköz
+    },
+    { 
+      icon: Mail, 
+      label: t("E-mail", "Email"), // Fordítás
+      value: "tasi.szabina28@gmail.com", 
+      href: "mailto:tasi.szabina28@gmail.com" 
+    },
+    { 
+      icon: MapPin, 
+      label: t("Lakhely", "Location"), // Fordítás
+      value: "Budapest" 
+    },
+    { 
+      icon: Clock, 
+      label: t("Elérhetőség", "Availability"), // Fordítás
+      value: t("Heti 40 óra", "40 hours/week") // Fordítás
+    },
+    { 
+      icon: EarthIcon, 
+      label: "LinkedIn", // Ez maradhat így, márkanév
+      value: t("Tasi Szabina", "Szabina Tasi"),
+      href: "https://www.linkedin.com/in/szabina-tasi-634111194/" 
+    },
   ];
 
   return (
-    // 1. A DOBOZ HÁTTERE ÉS KERETE
     <section className="rounded-2xl p-6 shadow-md transition-colors duration-300
       bg-white border border-gray-100             
       dark:bg-zinc-900 dark:border-zinc-800"
@@ -18,27 +45,28 @@ const ContactInfo = () => {
         text-gray-900 dark:text-white"
       >
         <div className="w-1 h-6 bg-primary rounded-full" />
-        Elérhetőségek
+        {/* Itt is fordítunk: */}
+        {t("Elérhetőségek", "Contact Info")}
       </h2>
       
       <div className="space-y-4">
         {contacts.map((contact, index) => (
           <div key={index} className="flex items-center gap-3">
-            {/* Az ikon háttere maradhat primary/10, az sötétben is jól néz ki */}
             <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
               <contact.icon className="w-5 h-5 text-primary" />
             </div>
             
             <div>
-              {/* A címke színe (szürke -> világosszürke) */}
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 {contact.label}
               </p>
               
-              {/* Az érték színe (fekete -> fehér) */}
               {contact.href ? (
                 <a 
                   href={contact.href} 
+                  // Ha külső link (LinkedIn), nyíljon új ablakban
+                  target={contact.label === "LinkedIn" ? "_blank" : undefined}
+                  rel={contact.label === "LinkedIn" ? "noopener noreferrer" : undefined}
                   className="font-medium hover:text-primary transition-colors
                     text-gray-900 dark:text-white"
                 >

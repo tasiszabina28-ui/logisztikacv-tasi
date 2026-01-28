@@ -1,13 +1,36 @@
 import { Languages, Users, Target, Palette, Laptop, Star } from "lucide-react";
+// 1. Behívjuk a nyelvi kontextust
+import { useLanguage } from "../LanguageContext";
 
 const SkillsSection = () => {
+  const { t } = useLanguage();
+
+  // 2. A lista elemeit lefordítjuk
   const skills = [
-    { icon: Star, label: "Monotonitástűrés" },
-    { icon: Languages, label: "Angol (középszint)" },
-    { icon: Users, label: "Csapatmunka/önálló munkavégzés" },
-    { icon: Target, label: "Precizitás" },
-    { icon: Palette, label: "Kreativitás" },
-    { icon: Laptop, label: "Office programok magabiztos használata" },
+    { 
+      icon: Star, 
+      label: t("Proaktivitás", "Proactivity") 
+    },
+    { 
+      icon: Languages, 
+      label: t("Angol B2 – Aktív üzleti kommunikáció", "English B2 – Active Business Communication") 
+    },
+    { 
+      icon: Users, 
+      label: t("Csapatmunka/önálló munkavégzés", "Teamwork & Independent Work") 
+    },
+    { 
+      icon: Target, 
+      label: t("Precizitás", "Precision & Accuracy") 
+    },
+    { 
+      icon: Palette, 
+      label: t("Kreativitás", "Creativity") 
+    },
+    { 
+      icon: Laptop, 
+      label: t("Office programok magabiztos használata", "Proficient in MS Office") 
+    },
   ];
 
   return (
@@ -20,7 +43,7 @@ const SkillsSection = () => {
         text-gray-900 dark:text-white"
       >
         <div className="w-1 h-6 bg-primary rounded-full" />
-        Képességek
+        {t("Képességek", "Skills")}
       </h2>
       
       <div className="grid grid-cols-2 gap-3">

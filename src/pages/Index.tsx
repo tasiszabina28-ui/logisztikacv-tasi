@@ -22,17 +22,19 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="md:col-span-1 space-y-6">
             <ContactInfo />
-            <SkillsSection />
-            <EducationSection />
+             <HobbiesSection />
+           
           </div>
           
           <div className="md:col-span-2 space-y-6">
-            <ExperienceSection />
-            <HobbiesSection />
+           <PortfolioSection />
+            
+           
+            <SkillsSection />
           </div>
         </div>
-
-        <PortfolioSection />
+ <EducationSection />
+        <ExperienceSection />
       </div>
 
     </MainLayout>

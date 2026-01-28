@@ -1,4 +1,5 @@
 import { Briefcase } from "lucide-react";
+import { useLanguage } from "../LanguageContext";
 
 interface Experience {
   title: string;
@@ -8,36 +9,57 @@ interface Experience {
 }
 
 const ExperienceSection = () => {
+  // 1. Behívjuk a fordítót
+  const { t } = useLanguage();
+
   const experiences: Experience[] = [
     {
-      title: "Adminisztrációs gyakornok",
+      title: t("Adminisztrációs gyakornok", "Administration Intern"),
       company: "EGIS Gyógyszergyár Zrt.",
-      period: "2025.05 - jelenleg",
-      description: "Az automatizálási és metrológia főosztály munkáját segítem, adminisztrációs tevékenységet végzek a belső rendszerekben, valamint Excel táblázatokban dolgozom."
+      period: t("2025.05 - jelenleg", "2025.05 - Present"),
+      description: t(
+        "Adatvezérelt folyamattámogatás és adminisztratív optimalizálás az automatizálási főosztályon.",
+        "Data-driven process support and administrative optimization at the automation department."
+      )
     },
     {
-      title: "Supply chain gyakornok",
+      title: t("Supply chain gyakornok", "Supply Chain Intern"),
       company: "Euroapi Hungary Kft.",
       period: "2024.08 - 2024.12",
-      description: "A beszerzési osztály munkáját segítettem, anyagáramlással kapcsolatos Excel táblázatokban dolgoztam."
+      description: t(
+        "Logisztikai adatelemzés és beszerzési folyamatmenedzsment.",
+        "Logistics data analysis and procurement process management."
+      )
     },
     {
-      title: "Back office gyakornok",
+      title: t("Back office gyakornok", "Back Office Intern"),
       company: "UNIQA Biztosító Zrt.",
       period: "2024.03 - 2024.07",
-      description: "Ügyfélszolgálati munkát végeztem, egyszerűbb ügyeket kezeltem és e-mailben kommunikáltam az ügyfelekkel."
+      description: t(
+        "Ügyfélélmény-menedzsment (CX) és digitális ügyfélkommunikáció.",
+        "Customer Experience (CX) management and digital client communication."
+      )
     },
     {
-      title: "Irodai asszisztens",
+      title: t("Irodai asszisztens", "Office Assistant"),
       company: "Fedex Express Hungary KFT.",
       period: "2023.05 - 2023.11",
-      description: "Import vám osztályon segédkeztem a vámkezelésben, vámkezelési megbízásokat és értesítéseket küldtem ki, ügyfelekkel tartottam kapcsolatot."
+      description: t(
+        "Nemzetközi logisztikai adminisztráció és vámügyi folyamatmenedzsment.",
+        "International logistics administration and customs process management."
+      )
     },
     {
-      title: "Minőségellenőr, majd gépkezelő",
+      title: t("Minőségellenőr, majd gépkezelő", "Quality Inspector / Machine Operator"),
       company: "CooperVision Kft",
-      period: "2021.06 - 2021.09 majd 2022.06-2022.09",
-      description: "Kontaktlencse gyártásban vettem részt, minőségellenőri feladatokat láttam el, majd gépkezelőként dolgoztam a gyártósoron diákként."
+      period: t(
+        "2021.06 - 2021.09 majd 2022.06-2022.09", 
+        "2021.06 - 2021.09 then 2022.06-2022.09"
+      ),
+      description: t(
+        "Minőségbiztosítási (QA) folyamatok felügyelete és precíziós gyártástámogatás.",
+        "Supervision of Quality Assurance (QA) processes and precision manufacturing support."
+      )
     },
   ];
 
@@ -50,7 +72,8 @@ const ExperienceSection = () => {
         <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
           <Briefcase className="w-5 h-5 text-primary" />
         </div>
-        Munkatapasztalat
+        {/* Cím fordítása */}
+        {t("Munkatapasztalat", "Experience")}
       </h2>
 
       <div className="space-y-6">
@@ -73,7 +96,7 @@ const ExperienceSection = () => {
                   {exp.title}
                 </h3>
                 
-                {/* Dátum címke (Maradhat primary, az mindenhol jó) */}
+                {/* Dátum címke */}
                 <span className="text-sm text-primary font-medium bg-primary/10 px-3 py-1 rounded-full">
                   {exp.period}
                 </span>
