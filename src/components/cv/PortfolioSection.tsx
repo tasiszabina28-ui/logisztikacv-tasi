@@ -37,7 +37,8 @@ const PortfolioSection = () => {
       ),
       image: "/pastpay-borito.png",
       link: "/pastpay_eventmarketing_designs.pdf",
-      tags: ["Print Design", "Event Marketing", "B2B", "Fintech", "Concept"],
+      tags: ["Print Design", "Event Marketing", "B2B", "Fintech", "Concept", "Photoshop"
+      ],
       icon: FileText
     },
     {
