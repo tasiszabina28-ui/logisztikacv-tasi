@@ -1,14 +1,13 @@
-import { ExternalLink, Presentation, Smartphone } from "lucide-react";
+import { ExternalLink, Presentation, Smartphone, Layout, FileText } from "lucide-react";
 import React from 'react';
 import { useLanguage } from "../LanguageContext";
 
-// Az interface-t ki lehet emelni, vagy maradhat
 interface PortfolioProject {
   title: string;
   category: string;
   description: string;
   link?: string;
-  image?: string; 
+  image?: string;
   tags: string[];
   icon: React.ElementType;
 }
@@ -18,14 +17,38 @@ const PortfolioSection = () => {
 
   const projects: PortfolioProject[] = [
     {
+      title: t("Cheq – HR Platform Rebranding (Koncepció)", "Cheq – HR Platform Rebranding (Concept)"),
+      category: t("UI/UX Redesign, B2B SaaS", "UI/UX Redesign, B2B SaaS"),
+      description: t(
+        "HR platform rebrandingje azzal a céllal, hogy kitörjön a hagyományos SaaS dizájnok tengeréből. Merész, emberközpontú vizuális világ és konverzióoptimalizált landing page egyben.",
+        "Rebranding an HR platform to break out from the sea of conventional SaaS designs. A bold, human-centric visual identity combined with a conversion-optimized landing page."
+      ),
+      image: "/cheqproject.png",
+      link: "https://cheq-design.vercel.app/",
+      tags: ["UI/UX Design", "Rebranding", "Landing Page", "AI tools", "B2B", "SaaS Concept", "Desktop only"],
+      icon: Layout
+    },
+    {
+      title: t("PastPay – B2B Eseménymarketing (Koncepció)", "PastPay – B2B Event Marketing (Concept)"),
+      category: t("Marketing, Print Design, Fintech", "Marketing, Print Design, Fintech"),
+      description: t(
+        "Proaktív vizuális koncepcióterv egy B2B BNPL szolgáltató offline megjelenéséhez. A fókuszban az edukációs anyagok (pl. komplex folyamatok vizuális lefordítása) és az azonnali konverziót, helyszíni regisztrációt ösztönző nyomtatott anyagok tervezése állt.",
+        "Proactive visual concept design for the offline presence of a B2B BNPL provider. The focus was on designing educational materials (e.g., translating complex processes visually) and print assets that drive immediate conversion and on-site registration."
+      ),
+      image: "/pastpay-borito.png",
+      link: "/pastpay_eventmarketing_designs.pdf",
+      tags: ["Print Design", "Event Marketing", "B2B", "Fintech", "Concept"],
+      icon: FileText
+    },
+    {
       title: t("Prezentációk, egyéb projektek", "Presentations & Other Projects"),
       category: t("Marketing, Kereskedelem, Beszerzés", "Marketing, Commerce, Procurement"),
       description: t(
         "Deciem piaci elemzés és Unicum kereskedelmi stratégia, költségcsökkentés és döntéselőkészítés Excel modellezéssel, Figyelemfelkeltő 'One-pager' Opel Corsa értékesítési anyag.",
         "Deciem market analysis and Unicum trade strategy, cost reduction and decision support with Excel modeling, engaging 'One-pager' sales material for Opel Corsa."
       ),
-      image: "/prezi-borito-1.jpg", 
-      link: "https://drive.google.com/drive/folders/1oFEzPhNzDHii4ORk8MagDpI5PfUuAVN2?usp=drive_link", 
+      image: "/prezi-borito-1.jpg",
+      link: "https://drive.google.com/drive/folders/1oFEzPhNzDHii4ORk8MagDpI5PfUuAVN2?usp=drive_link",
       tags: ["Marketing", t("Piackutatás", "Market Research"), "PowerPoint", t("Kereskedelem", "Commerce"), t("Beszerzés", "Procurement"), "Excel", "Canva"],
       icon: Presentation
     },
@@ -36,8 +59,8 @@ const PortfolioSection = () => {
         "Tanulást segítő applikáció koncepció. Interaktív prototípus és landing page terv.",
         "Study aid application concept. Interactive prototype and landing page design."
       ),
-      image: "/app-mockup.jpg", 
-      link: "https://cherryontopthestudyapp.vercel.app/", 
+      image: "/app-mockup.jpg",
+      link: "https://cherryontopthestudyapp.vercel.app/",
       tags: ["UI/UX Design", "App Concept"],
       icon: Smartphone
     },
@@ -49,13 +72,13 @@ const PortfolioSection = () => {
         <div className="w-1 h-6 bg-primary rounded-full" />
         {t("Portfólió", "Portfolio")}
       </h2>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <div key={index} className="flex flex-col rounded-xl overflow-hidden transition-all duration-300 group bg-white border border-gray-200 hover:shadow-lg hover:border-primary/30 dark:bg-zinc-800 dark:border-zinc-700">
             <div className="h-48 w-full bg-gray-100 dark:bg-zinc-900 relative overflow-hidden group-hover:opacity-90 transition-opacity">
               {project.image ? (
-                <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top" />
+                <img src={project.image} alt={project.title} className="w-full h-full object-contain p-4" />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-gray-400">
                   <project.icon className="w-16 h-16" />
