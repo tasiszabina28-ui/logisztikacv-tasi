@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Clock, EarthIcon } from "lucide-react";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useLanguage } from "../LanguageContext";
 
 const ContactInfo = () => {
@@ -21,18 +21,12 @@ const ContactInfo = () => {
     { 
       icon: MapPin, 
       label: t("Lakhely", "Location"), // Fordítás
-      value: "Budapest" 
+      value: "Táborfalva" 
     },
     { 
       icon: Clock, 
       label: t("Elérhetőség", "Availability"), // Fordítás
       value: t("Heti 40 óra", "40 hours/week") // Fordítás
-    },
-    { 
-      icon: EarthIcon, 
-      label: "LinkedIn", // Ez maradhat így, márkanév
-      value: t("Tasi Szabina", "Szabina Tasi"),
-      href: "https://www.linkedin.com/in/szabina-tasi-634111194/" 
     },
   ];
 

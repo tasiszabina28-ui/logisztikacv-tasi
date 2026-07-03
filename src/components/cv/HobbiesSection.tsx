@@ -49,9 +49,14 @@ const HobbiesSection = () => {
         {t("Érdeklődési körök", "Hobbies & Interests")}
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {hobbies.map((hobby, index) => (
-          <div key={index} className={`flex items-center gap-3 px-5 py-3 rounded-2xl border transition-all hover:scale-105 shadow-sm w-full ${hobby.color || "bg-gray-50 text-gray-700 border-gray-200 dark:bg-zinc-800 dark:text-gray-300 dark:border-zinc-700"}`}>
+          <div 
+            key={index} 
+            className={`flex items-center gap-3 px-5 py-3 rounded-2xl border transition-all hover:scale-105 shadow-sm w-full 
+              ${index === hobbies.length - 1 ? 'sm:col-span-2 lg:col-span-3' : ''} 
+              ${hobby.color || "bg-gray-50 text-gray-700 border-gray-200 dark:bg-zinc-800 dark:text-gray-300 dark:border-zinc-700"}`}
+          >
             <hobby.icon className="shrink-0" size={20} strokeWidth={2} />
             <span className="font-semibold text-sm tracking-wide leading-tight">{hobby.label}</span>
           </div>

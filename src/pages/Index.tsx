@@ -16,8 +16,6 @@ const Index = () => {
         {/* Teljes szélességű felső rész */}
         <ProfileSection />
 
-        <PortfolioSection />
-
         {/* Kétoszlopos elrendezés a maradék moduloknak */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
@@ -28,14 +26,16 @@ const Index = () => {
             <EducationSection />
           </div>
 
-          {/* JOBB OSZLOP (2/3): Munkatapasztalat, és alatta az Érdeklődési körök! */}
+          {/* JOBB OSZLOP (2/3): Munkatapasztalat */}
           <div className="md:col-span-2 space-y-6">
             <ExperienceSection />
-            <HobbiesSection /> {/* <-- Ide került át! */}
           </div>
 
         </div>
 
+        <HobbiesSection />
+
+        <PortfolioSection />
       </div>
 
     </MainLayout>

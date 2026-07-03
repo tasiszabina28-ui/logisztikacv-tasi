@@ -14,9 +14,18 @@ const ExperienceSection = () => {
 
   const experiences: Experience[] = [
     {
+      title: t("Szállítmányozási gyakornok", "Material Management Intern"),
+      company: "Knorr-Bremse Rail Systems Budapest",
+      period: t("2026.04 - jelenleg", "2026.04 - Present"),
+      description: t(
+        "Alapvető adminisztratív és adatkezelési támogatás biztosítása a szállítmányozási csapat számára. Haladó MS Excel funkciók és az SAP ERP rendszer alkalmazása az adatok pontosságának fenntartása, a napi munkafolyamatok optimalizálása és az ellátási lánc zökkenőmentes működésének támogatása érdekében.",
+        "Providing basic administrative and data management support to the forwarding team. Applying advanced MS Excel functions and the SAP ERP system to maintain data accuracy, optimize daily workflows, and support the smooth operation of the supply chain."
+      )
+    },
+    {
       title: t("Adminisztrációs gyakornok", "Administration Intern"),
       company: "EGIS Gyógyszergyár Zrt.",
-      period: t("2025.05 - jelenleg", "2025.05 - Present"),
+      period: t("2025.05 - 2026.02", "2025.05 - 2026.02"),
       description: t(
         "Adatvezérelt folyamattámogatás és adminisztratív optimalizálás az automatizálási főosztályon.",
         "Data-driven process support and administrative optimization at the automation department."

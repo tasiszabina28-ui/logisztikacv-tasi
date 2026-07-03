@@ -25,18 +25,11 @@ const ProfileSection = () => {
         {t("Tasi Szabina", "Szabina Tasi")}
       </h1>
 
-      {/* Alcím */}
-      <p className="text-lg mb-4 font-medium
-        text-gray-600 dark:text-gray-300"
-      >
-        {t('Digitális szemléletű marketing gyakornok', 'Marketing trainee with digital focus')}
-      </p>
-
       {/* Leírás */}
       <p className="max-w-md leading-relaxed
         text-gray-600 dark:text-gray-400"
       >
-        {t('23 éves vagyok, a 14. kerületben élek és jelenleg 7. félévemet töltöm kereskedelem-marketing szakon a BGE-MÜKK-ön. Célom, hogy betekintést nyerhessek egy vállalat belső folyamataiba (kezdve a beszerzéstől a logisztikán, marketingen át egészen a sales-ig, számomra mindez érdekes lehet), tapasztalatot szerezhessek, később pedig elhelyezkedhessek teljes állásban.', 'I am 23 years old, living in Budapest (14th district). Currently in my 7th semester studying Commerce and Marketing at Budapest University of Economics and Business Faculty of Marketing and Business Communication (BUEB FMBC). My goal is to gain insight into a company\'s internal processes (from procurement and logistics to marketing and sales), acquire professional experience, and transition into a full time position later.')}
+        {t('Táborfalvi lakosként, többéves irodai és logisztikai gyakornoki múlttal keresek teljes munkaidős pozíciót logisztikai területen. Mivel tanulmányaimat a BGE-n levelező tagozaton folytatom, így teljes állásban szeretnék a továbbiakban  elhelyezkedni. Erősségem a precíz adminisztráció, az önálló munkavégzés és a gyakorlatias problémamegoldás.', 'As a resident of Táborfalva, with several years of office and logistics internship experience, I am looking for a full-time position in the field of logistics. Since I am continuing my studies at BGE on a correspondence basis, I would like to work full-time in the future. My strengths are precise administration, independent work, and practical problem-solving.')}
       </p>
     </section>
   );
